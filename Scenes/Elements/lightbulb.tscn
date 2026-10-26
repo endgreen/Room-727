@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://bdbrkt0xtxxlj"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ey6ce"]
+transparency = 1
+albedo_color = Color(1, 1, 0.15686275, 0.5176471)
+
+[node name="Lightbulb" type="Node3D" unique_id=954562576]
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="." unique_id=2051614256]
+radius = 0.1
+material = SubResource("StandardMaterial3D_ey6ce")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=1368418797]
+light_color = Color(1.4075571, 1.4075571, 0.7062473, 1)
+light_energy = 0.366

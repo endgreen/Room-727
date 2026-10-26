@@ -1,0 +1,292 @@
+[gd_scene format=3 uid="uid://dplcwu8vj8hcp"]
+
+[ext_resource type="Script" uid="uid://cx4q2sf1xflq4" path="res://Scripts/elements/drawer.gd" id="1_drawer_script"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_l7wsx"]
+albedo_color = Color(0.8028588, 0.41906336, 0.26067898, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_om7pt"]
+albedo_color = Color(0.742099, 0.39155933, 0.059803806, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lftuw"]
+albedo_color = Color(0.76981264, 0.55716944, 0.40206772, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3s4qm"]
+albedo_color = Color(0.7891485, 0.59073347, 0, 1)
+
+[sub_resource type="Animation" id="Animation_qewxy"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.14013672, -0.17663574, -0.5995682)]
+}
+
+[sub_resource type="Animation" id="Animation_lgljf"]
+resource_name = "close"
+length = 0.6333333
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.53),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0.14013672, -0.17663574, -0.3899668), Vector3(0.14013672, -0.17663574, -0.5995682)]
+}
+
+[sub_resource type="Animation" id="Animation_3s4qm"]
+resource_name = "open"
+length = 0.6333333
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.53333336),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0.14013672, -0.17663574, -0.5995682), Vector3(0.14013672, -0.17663574, -0.3899668)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_lgljf"]
+_data = {
+&"RESET": SubResource("Animation_qewxy"),
+&"close": SubResource("Animation_lgljf"),
+&"open": SubResource("Animation_3s4qm")
+}
+
+[sub_resource type="Animation" id="Animation_drawer2_reset"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.14013672, -0.36665428, -0.5995682)]
+}
+
+[sub_resource type="Animation" id="Animation_drawer2_close"]
+resource_name = "close"
+length = 0.6333333
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.53),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0.14013672, -0.36665428, -0.3899668), Vector3(0.14013672, -0.36665428, -0.5995682)]
+}
+
+[sub_resource type="Animation" id="Animation_drawer2_open"]
+resource_name = "open"
+length = 0.6333333
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.53333336),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0.14013672, -0.36665428, -0.5995682), Vector3(0.14013672, -0.36665428, -0.3899668)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_drawer2"]
+_data = {
+&"RESET": SubResource("Animation_drawer2_reset"),
+&"close": SubResource("Animation_drawer2_close"),
+&"open": SubResource("Animation_drawer2_open")
+}
+
+[sub_resource type="Animation" id="Animation_drawer3_reset"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.14013672, -0.60411865, -0.5995682)]
+}
+
+[sub_resource type="Animation" id="Animation_drawer3_close"]
+resource_name = "close"
+length = 0.6333333
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.53),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0.14013672, -0.60411865, -0.3899668), Vector3(0.14013672, -0.60411865, -0.5995682)]
+}
+
+[sub_resource type="Animation" id="Animation_drawer3_open"]
+resource_name = "open"
+length = 0.6333333
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.53333336),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0.14013672, -0.60411865, -0.5995682), Vector3(0.14013672, -0.60411865, -0.3899668)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_drawer3"]
+_data = {
+&"RESET": SubResource("Animation_drawer3_reset"),
+&"close": SubResource("Animation_drawer3_close"),
+&"open": SubResource("Animation_drawer3_open")
+}
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_l7wsx"]
+size = Vector3(1.1231079, 0.13909912, 0.06109619)
+
+[node name="Dresser" type="Node3D" unique_id=528884770]
+
+[node name="GeneralFigure" type="CSGBox3D" parent="." unique_id=783791357]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.14984131, -0.40063095, -0.62949497)
+size = Vector3(1.2996826, 0.7344971, 0.7010498)
+material = SubResource("StandardMaterial3D_l7wsx")
+
+[node name="VoidForDrawer" type="CSGBox3D" parent="GeneralFigure" unique_id=520213973]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0079193115, 0.22858429, 0.049827576)
+operation = 2
+size = Vector3(1.2189636, 0.1492157, 0.6729584)
+
+[node name="VoidForDrawer2" type="CSGBox3D" parent="GeneralFigure" unique_id=458835819]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0079193115, 0.038565755, 0.049827576)
+operation = 2
+size = Vector3(1.2189636, 0.1492157, 0.6729584)
+
+[node name="VoidForDrawer3" type="CSGBox3D" parent="GeneralFigure" unique_id=703702612]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0079193115, -0.19889861, 0.049827576)
+operation = 2
+size = Vector3(1.2189636, 0.1492157, 0.6729584)
+
+[node name="Drawer" type="CSGBox3D" parent="." unique_id=865927069]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.14013672, -0.17663574, -0.5995682)
+size = Vector3(1.1943359, 0.12866211, 0.6642456)
+material = SubResource("StandardMaterial3D_om7pt")
+script = ExtResource("1_drawer_script")
+
+[node name="EmptySpace" type="CSGBox3D" parent="Drawer" unique_id=1827941057]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00021362305, 0.019991472, -0.0018775761)
+operation = 2
+size = Vector3(1.12323, 0.11010742, 0.6182556)
+
+[node name="DrawerFrontPiece" type="CSGBox3D" parent="Drawer" unique_id=1591779940]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0004234314, 0.0041363537, 0.3352949)
+size = Vector3(1.1952133, 0.13513184, 0.017906189)
+material = SubResource("StandardMaterial3D_lftuw")
+
+[node name="Handle" type="CSGBox3D" parent="Drawer" unique_id=2124465202]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.007767856, -0.0016529113, 0.34702438)
+size = Vector3(0.24082947, 0.027557373, 0.018821716)
+material = SubResource("StandardMaterial3D_3s4qm")
+
+[node name="open_close" type="AnimationPlayer" parent="Drawer" unique_id=1122983728]
+libraries/ = SubResource("AnimationLibrary_lgljf")
+
+[node name="AreaInteraction" type="Area3D" parent="Drawer" unique_id=1249550409]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Drawer/AreaInteraction" unique_id=742755049]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0049743652, 0.0042419434, 0.37612915)
+shape = SubResource("BoxShape3D_l7wsx")
+
+[node name="Drawer2" type="CSGBox3D" parent="." unique_id=892350003]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.14013672, -0.36665428, -0.5995682)
+size = Vector3(1.1943359, 0.12866211, 0.6642456)
+material = SubResource("StandardMaterial3D_om7pt")
+script = ExtResource("1_drawer_script")
+
+[node name="EmptySpace" type="CSGBox3D" parent="Drawer2" unique_id=1709777105]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00021362305, 0.019991472, -0.0018775761)
+operation = 2
+size = Vector3(1.12323, 0.11010742, 0.6182556)
+
+[node name="DrawerFrontPiece" type="CSGBox3D" parent="Drawer2" unique_id=168583748]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0004234314, 0.0041363537, 0.3352949)
+size = Vector3(1.1952133, 0.13513184, 0.017906189)
+material = SubResource("StandardMaterial3D_lftuw")
+
+[node name="Handle" type="CSGBox3D" parent="Drawer2" unique_id=492253610]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.007767856, -0.0016529113, 0.34702438)
+size = Vector3(0.24082947, 0.027557373, 0.018821716)
+material = SubResource("StandardMaterial3D_3s4qm")
+
+[node name="open_close" type="AnimationPlayer" parent="Drawer2" unique_id=277213480]
+libraries/ = SubResource("AnimationLibrary_drawer2")
+
+[node name="AreaInteraction" type="Area3D" parent="Drawer2" unique_id=1687490845]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Drawer2/AreaInteraction" unique_id=889473751]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0049743652, 0.0042419434, 0.37612915)
+shape = SubResource("BoxShape3D_l7wsx")
+
+[node name="Drawer3" type="CSGBox3D" parent="." unique_id=1476818105]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.14013672, -0.60411865, -0.5995682)
+size = Vector3(1.1943359, 0.12866211, 0.6642456)
+material = SubResource("StandardMaterial3D_om7pt")
+script = ExtResource("1_drawer_script")
+
+[node name="EmptySpace" type="CSGBox3D" parent="Drawer3" unique_id=1928476562]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00021362305, 0.019991472, -0.0018775761)
+operation = 2
+size = Vector3(1.12323, 0.11010742, 0.6182556)
+
+[node name="DrawerFrontPiece" type="CSGBox3D" parent="Drawer3" unique_id=453931362]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0004234314, 0.0041363537, 0.3352949)
+size = Vector3(1.1952133, 0.13513184, 0.017906189)
+material = SubResource("StandardMaterial3D_lftuw")
+
+[node name="Handle" type="CSGBox3D" parent="Drawer3" unique_id=1797093232]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.007767856, -0.0016529113, 0.34702438)
+size = Vector3(0.24082947, 0.027557373, 0.018821716)
+material = SubResource("StandardMaterial3D_3s4qm")
+
+[node name="open_close" type="AnimationPlayer" parent="Drawer3" unique_id=1908499845]
+libraries/ = SubResource("AnimationLibrary_drawer3")
+
+[node name="AreaInteraction" type="Area3D" parent="Drawer3" unique_id=1779589918]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Drawer3/AreaInteraction" unique_id=2005472240]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0049743652, 0.0042419434, 0.37612915)
+shape = SubResource("BoxShape3D_l7wsx")

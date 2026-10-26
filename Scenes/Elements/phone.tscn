@@ -1,0 +1,89 @@
+[gd_scene format=3 uid="uid://bpm3ae8q6o5s0"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_l7wsx"]
+albedo_color = Color(5.2943824e-07, 0.84762233, 0.024211308, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6ladw"]
+albedo_color = Color(0.4506483, 0.4506483, 0.45064825, 1)
+
+[node name="Phone" type="Node3D" unique_id=1419684638]
+
+[node name="Phone" type="Node3D" parent="." unique_id=983769811]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Phone" unique_id=385190704]
+transform = Transform3D(1, 0, 0, 0, 0.3750314, 0, 0, 0, 0.38088584, -0.10972595, -0.47381094, -0.05230671)
+size = Vector3(0.23873901, 0.09118652, 0.6813965)
+
+[node name="CSGBox3D12" type="CSGBox3D" parent="Phone/CSGBox3D" unique_id=142599841]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.078571975, 0.057120085, 0.23252109)
+operation = 2
+size = Vector3(0.03850937, 0.09895325, 0.10710144)
+
+[node name="CSGBox3D13" type="CSGBox3D" parent="Phone/CSGBox3D" unique_id=968766620]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.078571975, 0.057120085, -0.21805514)
+operation = 2
+size = Vector3(0.03850937, 0.09895325, 0.10710144)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Phone" unique_id=1549618022]
+transform = Transform3D(1, 0, 0, 0, 0.3750314, 0, 0, 0, 0.38088584, -0.06912178, -0.4694219, -0.12439375)
+size = Vector3(0.10967636, 0.09118652, 0.1729126)
+material = SubResource("StandardMaterial3D_l7wsx")
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="Phone" unique_id=620265181]
+transform = Transform3D(1, 0, 0, 0, 0.3750314, 0, 0, 0, 0.38088584, -0.10199027, -0.4694219, -0.06308074)
+size = Vector3(0.028395653, 0.09118652, 0.06253052)
+material = SubResource("StandardMaterial3D_6ladw")
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="Phone" unique_id=1416069447]
+transform = Transform3D(1, 0, 0, 0, 0.3750314, 0, 0, 0, 0.38088584, -0.06565784, -0.4694219, -0.06308074)
+size = Vector3(0.028395653, 0.09118652, 0.06253052)
+material = SubResource("StandardMaterial3D_6ladw")
+
+[node name="CSGBox3D5" type="CSGBox3D" parent="Phone" unique_id=587057195]
+transform = Transform3D(1, 0, 0, 0, 0.3750314, 0, 0, 0, 0.38088584, -0.030128445, -0.4694219, -0.06308074)
+size = Vector3(0.028395653, 0.09118652, 0.06253052)
+material = SubResource("StandardMaterial3D_6ladw")
+
+[node name="CSGBox3D6" type="CSGBox3D" parent="Phone" unique_id=1123006498]
+transform = Transform3D(1, 0, 0, 0, 0.3750314, 0, 0, 0, 0.38088584, -0.10199027, -0.4694219, -0.02281288)
+size = Vector3(0.028395653, 0.09118652, 0.06253052)
+material = SubResource("StandardMaterial3D_6ladw")
+
+[node name="CSGBox3D7" type="CSGBox3D" parent="Phone" unique_id=390941276]
+transform = Transform3D(1, 0, 0, 0, 0.3750314, 0, 0, 0, 0.38088584, -0.06565784, -0.4694219, -0.02281288)
+size = Vector3(0.028395653, 0.09118652, 0.06253052)
+material = SubResource("StandardMaterial3D_6ladw")
+
+[node name="CSGBox3D8" type="CSGBox3D" parent="Phone" unique_id=251747914]
+transform = Transform3D(1, 0, 0, 0, 0.3750314, 0, 0, 0, 0.38088584, -0.030128445, -0.4694219, -0.02281288)
+size = Vector3(0.028395653, 0.09118652, 0.06253052)
+material = SubResource("StandardMaterial3D_6ladw")
+
+[node name="CSGBox3D9" type="CSGBox3D" parent="Phone" unique_id=226549223]
+transform = Transform3D(1, 0, 0, 0, 0.3750314, 0, 0, 0, 0.38088584, -0.10199027, -0.4694219, 0.016803972)
+size = Vector3(0.028395653, 0.09118652, 0.06253052)
+material = SubResource("StandardMaterial3D_6ladw")
+
+[node name="CSGBox3D10" type="CSGBox3D" parent="Phone" unique_id=1997115036]
+transform = Transform3D(1, 0, 0, 0, 0.3750314, 0, 0, 0, 0.38088584, -0.06565784, -0.4694219, 0.016803972)
+size = Vector3(0.028395653, 0.09118652, 0.06253052)
+material = SubResource("StandardMaterial3D_6ladw")
+
+[node name="CSGBox3D11" type="CSGBox3D" parent="Phone" unique_id=104038119]
+transform = Transform3D(1, 0, 0, 0, 0.3750314, 0, 0, 0, 0.38088584, -0.030128445, -0.4694219, 0.016803972)
+size = Vector3(0.028395653, 0.09118652, 0.06253052)
+material = SubResource("StandardMaterial3D_6ladw")
+
+[node name="Speaker" type="Node3D" parent="." unique_id=707872022]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Speaker" unique_id=1128781370]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.18707067, -0.42589435, -0.04983759)
+size = Vector3(0.029922485, 0.030773437, 0.20593262)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Speaker" unique_id=1959643798]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.18707067, -0.43895295, -0.13426447)
+size = Vector3(0.029922485, 0.056890626, 0.037078857)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="Speaker" unique_id=1452485180]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.18707067, -0.43895295, 0.036862165)
+size = Vector3(0.029922485, 0.056890626, 0.037078857)

@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://l53b0arfcwfr"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ramds"]
+albedo_color = Color(0.26037496, 0.16988409, 0.050985597, 1)
+
+[node name="Table" type="Node3D" unique_id=467269716]
+
+[node name="Body" type="CSGBox3D" parent="." unique_id=59494261]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.30395508, 0.46032715, -0.122802734)
+size = Vector3(1.6079102, 0.0793457, 0.75439453)
+material = SubResource("StandardMaterial3D_ramds")
+
+[node name="Leg1" type="CSGBox3D" parent="." unique_id=92998505]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0784302, 0.19403076, 0.2234497)
+size = Vector3(0.05895996, 0.6119385, 0.06188965)
+material = SubResource("StandardMaterial3D_ramds")
+
+[node name="Leg2" type="CSGBox3D" parent="." unique_id=1432255210]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0784302, 0.19403076, -0.4639066)
+size = Vector3(0.05895996, 0.6119385, 0.06188965)
+material = SubResource("StandardMaterial3D_ramds")
+
+[node name="Leg3" type="CSGBox3D" parent="." unique_id=865438242]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4686514, 0.19403076, 0.2234497)
+size = Vector3(0.05895996, 0.6119385, 0.06188965)
+material = SubResource("StandardMaterial3D_ramds")
+
+[node name="Leg4" type="CSGBox3D" parent="." unique_id=28798349]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4686514, 0.19403076, -0.4639066)
+size = Vector3(0.05895996, 0.6119385, 0.06188965)
+material = SubResource("StandardMaterial3D_ramds")

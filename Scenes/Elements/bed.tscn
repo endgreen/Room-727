@@ -1,0 +1,69 @@
+[gd_scene format=3 uid="uid://c1t3pr80ppq1r"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_k4g38"]
+albedo_color = Color(0.9958901, 0.9821859, 0.8388838, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_uqer2"]
+albedo_color = Color(0.38683346, 0.21735165, 0.11921305, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jru3j"]
+albedo_color = Color(0.6189329, 1.732707e-06, 3.85046e-07, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wh7fp"]
+
+[node name="Bed" type="Node3D" unique_id=1833395671]
+
+[node name="Couch" type="CSGBox3D" parent="." unique_id=997896602]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5367109, 0)
+size = Vector3(1.35, 0.21099854, 1.9)
+material = SubResource("StandardMaterial3D_k4g38")
+
+[node name="Underwoord" type="CSGBox3D" parent="." unique_id=1286066599]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.41799664, 0)
+size = Vector3(1.35, 0.020050049, 1.9)
+material = SubResource("StandardMaterial3D_uqer2")
+
+[node name="Sheet_1" type="CSGBox3D" parent="." unique_id=1201250004]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.64350903, 0.23789096)
+size = Vector3(1.35, 0.001, 1.3694336)
+material = SubResource("StandardMaterial3D_jru3j")
+
+[node name="Sheet_2" type="CSGBox3D" parent="." unique_id=204793366]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.67460936, 0.5575803, 0.23796415)
+size = Vector3(0.019140631, 0.17285742, 1.36958)
+material = SubResource("StandardMaterial3D_jru3j")
+
+[node name="Sheet_3" type="CSGBox3D" parent="." unique_id=1171655363]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.68239087, 0.5575803, 0.23796415)
+size = Vector3(0.019140631, 0.17285742, 1.36958)
+material = SubResource("StandardMaterial3D_jru3j")
+
+[node name="Pillow_1" type="CSGBox3D" parent="." unique_id=1803770813]
+transform = Transform3D(0.9490923, 0, -0.31499812, 0, 1, 0, 0.31499812, 0, 0.9490923, -0.29908907, 0.6601775, -0.6647674)
+size = Vector3(0.46328124, 0.036636353, 0.24487916)
+material = SubResource("StandardMaterial3D_wh7fp")
+
+[node name="Pillow_2" type="CSGBox3D" parent="." unique_id=1976484781]
+transform = Transform3D(0.96403325, 0, 0.2657816, 0, 1, 0, -0.2657816, 0, 0.96403325, 0.32838154, 0.6601775, -0.70701635)
+size = Vector3(0.46328124, 0.036636353, 0.24487916)
+material = SubResource("StandardMaterial3D_wh7fp")
+
+[node name="Leg_1" type="CSGBox3D" parent="." unique_id=1959043018]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.6276001, 0.11502457, 0.8887221)
+size = Vector3(0.09479982, 0.61011505, 0.10335693)
+material = SubResource("StandardMaterial3D_uqer2")
+
+[node name="Leg_2" type="CSGBox3D" parent="." unique_id=1762085973]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.6206801, 0.11468887, 0.8887221)
+size = Vector3(0.09479982, 0.60944366, 0.10335693)
+material = SubResource("StandardMaterial3D_uqer2")
+
+[node name="Leg_3" type="CSGBox3D" parent="." unique_id=1735275272]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.6206801, 0.11532974, -0.8940806)
+size = Vector3(0.09479982, 0.6107254, 0.10335693)
+material = SubResource("StandardMaterial3D_uqer2")
+
+[node name="Leg_4" type="CSGBox3D" parent="." unique_id=1566451297]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.62302756, 0.11371231, -0.8940806)
+size = Vector3(0.09479982, 0.60749054, 0.10335693)
+material = SubResource("StandardMaterial3D_uqer2")

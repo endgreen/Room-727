@@ -1,0 +1,121 @@
+[gd_scene format=3 uid="uid://xr6mnvcwhlk1"]
+
+[ext_resource type="Script" uid="uid://ba4l68jpwbdn4" path="res://Scripts/multiversal/game_manager.gd" id="1_3dryh"]
+[ext_resource type="Script" uid="uid://bcx36ynvqfj5" path="res://Scripts/UI/tip_text.gd" id="1_wowpa"]
+[ext_resource type="Script" uid="uid://c0x4wtcauwwpn" path="res://Scripts/UI/pointer.gd" id="2_pointer"]
+[ext_resource type="PackedScene" uid="uid://b0jpa1e8lbedt" path="res://Scenes/game_map.tscn" id="2_qxrlw"]
+[ext_resource type="PackedScene" uid="uid://dvowjfj4rxsud" path="res://Scenes/Player/player.tscn" id="3_wrm1d"]
+[ext_resource type="Shader" uid="uid://cd64mepo3arnc" path="res://Shaders/GameEffect.gdshader" id="7_1l0tm"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ramds"]
+shader = ExtResource("7_1l0tm")
+shader_parameter/wiggle = 0.03
+shader_parameter/wiggle_speed = 25.0
+shader_parameter/smear = 1.0
+shader_parameter/blur_samples = 15
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_3dryh"]
+sky_top_color = Color(0, 0, 0, 1)
+sky_horizon_color = Color(0, 0, 0, 1)
+ground_bottom_color = Color(0, 0, 0, 1)
+ground_horizon_color = Color(0, 0, 0, 1)
+
+[sub_resource type="Sky" id="Sky_wowpa"]
+sky_material = SubResource("ProceduralSkyMaterial_3dryh")
+
+[sub_resource type="Environment" id="Environment_i6g32"]
+background_mode = 2
+sky = SubResource("Sky_wowpa")
+glow_enabled = true
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_3dryh"]
+size = Vector3(1, 1, 2.3711548)
+
+[node name="Game" type="Node3D" unique_id=1941761500]
+
+[node name="UI" type="Control" parent="." unique_id=1005191455]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="Pointer" type="ColorRect" parent="UI" unique_id=213512152]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.48842594
+anchor_right = 0.50651044
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_pointer")
+
+[node name="Shader" type="ColorRect" parent="UI" unique_id=1343661645]
+material = SubResource("ShaderMaterial_ramds")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="debug_currentgamePhase" type="Label" parent="UI" unique_id=2078547844]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.12654321
+grow_horizontal = 2
+grow_vertical = 2
+text = "Current game phase"
+metadata/_edit_use_anchors_ = true
+
+[node name="tip_text" type="Label" parent="UI" unique_id=672682902]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -103.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Consejo"
+script = ExtResource("1_wowpa")
+
+[node name="tip_text_timer" type="Timer" parent="UI/tip_text" unique_id=930845440]
+wait_time = 4.0
+one_shot = true
+
+[node name="game_map" parent="." unique_id=1184582623 instance=ExtResource("2_qxrlw")]
+
+[node name="Effects" type="Node" parent="." unique_id=59626356]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="Effects" unique_id=502420453]
+environment = SubResource("Environment_i6g32")
+
+[node name="Stationary_Lights" type="Node" parent="Effects" unique_id=573302531]
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Effects/Stationary_Lights" unique_id=1449491941]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.603428, 2.8691452, 0)
+
+[node name="game_manager" type="Node" parent="." unique_id=1441893864]
+script = ExtResource("1_3dryh")
+
+[node name="Player" parent="." unique_id=387182528 instance=ExtResource("3_wrm1d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.682822, 0.23320818, -0.63595873)
+
+[node name="Progression" type="Node3D" parent="." unique_id=604066570]
+
+[node name="FirstPhaseArea" type="Area3D" parent="Progression" unique_id=1696165234 groups=["killedAtOne"]]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Progression/FirstPhaseArea" unique_id=1942406238]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.210962, -0.74530375, -0.10041565)
+shape = SubResource("BoxShape3D_3dryh")
+
+[connection signal="timeout" from="UI/tip_text/tip_text_timer" to="UI/tip_text" method="tip_text_timeout"]
+[connection signal="body_entered" from="Progression/FirstPhaseArea" to="game_manager" method="FirstAreaEntered"]

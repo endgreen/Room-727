@@ -1,0 +1,51 @@
+[gd_scene format=3 uid="uid://dvowjfj4rxsud"]
+
+[ext_resource type="Script" uid="uid://cup5tog0xn6cv" path="res://Scripts/Player/player.gd" id="1_blnjl"]
+[ext_resource type="Script" uid="uid://cho2whb6djg45" path="res://Scripts/Player/crouch_manager.gd" id="2_a3d8c"]
+[ext_resource type="Script" uid="uid://0jj1le65alr4" path="res://Scripts/Player/interaction_manager.gd" id="4_htcer"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_7duwv"]
+height = 1.8071289
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_xpcdj"]
+height = 0.54766846
+
+[node name="Player" type="CharacterBody3D" unique_id=387182528 groups=["player"]]
+script = ExtResource("1_blnjl")
+
+[node name="Normal_Collision" type="CollisionShape3D" parent="." unique_id=182732862]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.09643555, 0)
+shape = SubResource("CapsuleShape3D_7duwv")
+
+[node name="Crouched_Collision" type="CollisionShape3D" parent="." unique_id=197341286]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.72299194, 0)
+shape = SubResource("CylinderShape3D_xpcdj")
+
+[node name="Neck" type="Marker3D" parent="." unique_id=515802135]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.48296297, 0)
+
+[node name="Camera3D" type="Camera3D" parent="Neck" unique_id=1410052471]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0061700344, 0.12038696, -0.0016822219)
+
+[node name="Interaction_raycast" type="RayCast3D" parent="Neck/Camera3D" unique_id=1635678101]
+target_position = Vector3(0, 0, -1.06)
+hit_from_inside = true
+collide_with_areas = true
+collide_with_bodies = false
+
+[node name="Uncrouched_cameraPos" type="Marker3D" parent="." unique_id=1453336382]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.59804046, 0)
+
+[node name="Crouched_cameraPos" type="Marker3D" parent="." unique_id=1077167006]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.6870991, 0)
+
+[node name="Crouch_Manager" type="Node" parent="." unique_id=678467355 node_paths=PackedStringArray("neck", "Crouched_cameraPos", "Uncrouched_cameraPos", "Crouched_collision", "Uncrouched_collision")]
+script = ExtResource("2_a3d8c")
+neck = NodePath("../Neck")
+Crouched_cameraPos = NodePath("../Crouched_cameraPos")
+Uncrouched_cameraPos = NodePath("../Uncrouched_cameraPos")
+Crouched_collision = NodePath("../Crouched_Collision")
+Uncrouched_collision = NodePath("../Normal_Collision")
+
+[node name="Interaction_Manager" type="Node" parent="." unique_id=2022207346]
+script = ExtResource("4_htcer")

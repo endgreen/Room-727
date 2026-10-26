@@ -1,0 +1,9 @@
+# Godot 4+ specific ignores
+.godot/
+/android/
+*.translation
+
+# Binarios pesados de ziva_agent
+addons/ziva_agent/bin/
+addons/ziva_agent/bin-deps/
+addons/ziva_agent/zivacode/

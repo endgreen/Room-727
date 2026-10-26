@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://7xp38tl6ojlv"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_l7wsx"]
+transparency = 1
+blend_mode = 1
+
+[node name="window" type="Node3D" unique_id=1567416412]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=1529727156]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.15587366, 0.11132482, -0.15022278)
+size = Vector3(0.15847778, 0.11514282, 2.33078)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="." unique_id=1362802675]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.14717233, 0.69533205, -0.1365962)
+size = Vector3(0.06330109, 1.2831573, 0.05242157)
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="." unique_id=733974483]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.14717233, 0.74140394, -0.14791036)
+size = Vector3(0.06330109, 0.045041084, 2.3588977)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="." unique_id=857922616]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.14106882, 0.7425122, -0.15022278)
+size = Vector3(0.06378937, 1.1627579, 2.33078)
+material = SubResource("StandardMaterial3D_l7wsx")
