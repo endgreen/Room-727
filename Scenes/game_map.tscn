@@ -136,4 +136,4 @@ size = Vector3(1, 1.8525391, 1)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.5393105, -0.7232294, -0.7750814)
 
 [node name="Dresser" parent="." unique_id=528884770 instance=ExtResource("7_mue85")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.773635, 0.0010876656, -1.8862638)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.820615, 0.5172123, -1.8862638)

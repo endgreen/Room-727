@@ -26,6 +26,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.48296297, 0)
 
 [node name="Camera3D" type="Camera3D" parent="Neck" unique_id=1410052471]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0061700344, 0.12038696, -0.0016822219)
+current = true
 
 [node name="Interaction_raycast" type="RayCast3D" parent="Neck/Camera3D" unique_id=1635678101]
 target_position = Vector3(0, 0, -1.06)

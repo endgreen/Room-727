@@ -17,7 +17,6 @@ config/features=PackedStringArray("4.7", "Mobile")
 
 EventBus="*uid://coag0iopyc0pp"
 TipTextBus="*uid://dajvhro0cjp18"
-_mcp_game_helper="*res://addons/godot_ai/runtime/game_helper.gd"
 
 [display]
 
@@ -29,15 +28,12 @@ window/stretch/aspect="expand"
 version_control/plugin_name="GitPlugin"
 version_control/autoload_on_startup=true
 
-[editor_plugins]
-
-enabled=PackedStringArray("res://addons/godot_ai/plugin.cfg")
-
 [global_group]
 
 interactable="Group for things that can be interacted with the player's raycast."
 player="Group for nodes to know if a body is the player."
 killedAtOne="Nodes that should be deleted when entering to the 1st phase."
+photographable="Able to interact to be fotographed"
 
 [input]
 

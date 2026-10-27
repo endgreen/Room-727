@@ -68,6 +68,12 @@ _data = {
 &"open": SubResource("Animation_3s4qm")
 }
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_l7wsx"]
+size = Vector3(1.1231079, 0.13909912, 0.06109619)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xcxek"]
+albedo_color = Color(0.0056611504, 0.0056611514, 0.00566115, 1)
+
 [sub_resource type="Animation" id="Animation_drawer2_reset"]
 length = 0.001
 tracks/0/type = "value"
@@ -121,6 +127,15 @@ _data = {
 &"close": SubResource("Animation_drawer2_close"),
 &"open": SubResource("Animation_drawer2_open")
 }
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6nlwo"]
+albedo_color = Color(0.77910864, 0.10701687, 0.4852091, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_b54os"]
+albedo_color = Color(0.30947912, 0.44018826, 0.9097371, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rekui"]
+albedo_color = Color(0.30790195, 0.5307404, 0.27418664, 1)
 
 [sub_resource type="Animation" id="Animation_drawer3_reset"]
 length = 0.001
@@ -176,8 +191,8 @@ _data = {
 &"open": SubResource("Animation_drawer3_open")
 }
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_l7wsx"]
-size = Vector3(1.1231079, 0.13909912, 0.06109619)
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lgljf"]
+albedo_color = Color(0.7426658, 0.4497373, 0.3549311, 1)
 
 [node name="Dresser" type="Node3D" unique_id=528884770]
 
@@ -231,6 +246,15 @@ libraries/ = SubResource("AnimationLibrary_lgljf")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0049743652, 0.0042419434, 0.37612915)
 shape = SubResource("BoxShape3D_l7wsx")
 
+[node name="Object_1" type="CSGBox3D" parent="Drawer" unique_id=1849284253]
+transform = Transform3D(0.7686181, 0, -0.6397079, 0, 1, 0, 0.6397079, 0, 0.7686181, -0.23899645, -0.0063476563, 0.03820604)
+size = Vector3(0.32702637, 0.020507813, 0.25708008)
+
+[node name="Object_2" type="CSGBox3D" parent="Drawer" unique_id=515565298]
+transform = Transform3D(0.7686181, 0, -0.6397079, 0, 1, 0, 0.6397079, 0, 0.7686181, 0.20793721, -0.0063476563, 0.06253904)
+size = Vector3(0.027282715, 0.020507813, 0.25708008)
+material = SubResource("StandardMaterial3D_xcxek")
+
 [node name="Drawer2" type="CSGBox3D" parent="." unique_id=892350003]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.14013672, -0.36665428, -0.5995682)
 size = Vector3(1.1943359, 0.12866211, 0.6642456)
@@ -261,6 +285,21 @@ libraries/ = SubResource("AnimationLibrary_drawer2")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0049743652, 0.0042419434, 0.37612915)
 shape = SubResource("BoxShape3D_l7wsx")
 
+[node name="cloth1" type="CSGBox3D" parent="Drawer2" unique_id=772602317]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.36397797, -0.024041057, 0.014160156)
+size = Vector3(0.30419922, 0.045654297, 0.4189453)
+material = SubResource("StandardMaterial3D_6nlwo")
+
+[node name="cloth2" type="CSGBox3D" parent="Drawer2" unique_id=618198956]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.043831974, -0.024041057, 0.014160156)
+size = Vector3(0.30419922, 0.045654297, 0.4189453)
+material = SubResource("StandardMaterial3D_b54os")
+
+[node name="cloth3" type="CSGBox3D" parent="Drawer2" unique_id=1673642606]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.2684628, -0.024041057, 0.014160156)
+size = Vector3(0.30419922, 0.045654297, 0.4189453)
+material = SubResource("StandardMaterial3D_rekui")
+
 [node name="Drawer3" type="CSGBox3D" parent="." unique_id=1476818105]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.14013672, -0.60411865, -0.5995682)
 size = Vector3(1.1943359, 0.12866211, 0.6642456)
@@ -290,3 +329,14 @@ libraries/ = SubResource("AnimationLibrary_drawer3")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Drawer3/AreaInteraction" unique_id=2005472240]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0049743652, 0.0042419434, 0.37612915)
 shape = SubResource("BoxShape3D_l7wsx")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=313782495]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.14593506, -1.0157431, -0.6292451)
+size = Vector3(1.2918701, 0.49975586, 0.69189453)
+material = SubResource("StandardMaterial3D_lgljf")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="CSGBox3D" unique_id=1424203389]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0037155151, -0.1811006, 0.35166556)
+operation = 2
+size = Vector3(1.4435272, 0.11785889, 0.16772461)
+material = SubResource("StandardMaterial3D_lgljf")
