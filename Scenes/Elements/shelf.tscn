@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://bcx2gr74x3uiu"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xcxek"]
+albedo_color = Color(0.61914784, 0.29591513, 0.113288246, 1)
+
+[node name="Shelf" type="Node3D" unique_id=348938761]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=579842811]
+size = Vector3(1, 0.07122803, 0.34466553)
+material = SubResource("StandardMaterial3D_xcxek")
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="." unique_id=898727875]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.4173784, 0)
+size = Vector3(1, 0.07122803, 0.34466553)
+material = SubResource("StandardMaterial3D_xcxek")
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="." unique_id=522981484]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.46110797, 0.18364647, 0)
+size = Vector3(0.07714844, 0.42477417, 0.34466553)
+material = SubResource("StandardMaterial3D_xcxek")
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="." unique_id=1712913922]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.46016592, 0.18364646, 0)
+size = Vector3(0.07714844, 0.42477417, 0.34466553)
+material = SubResource("StandardMaterial3D_xcxek")

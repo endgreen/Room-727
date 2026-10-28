@@ -1,0 +1,70 @@
+{
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "mcp__godot__.*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 .claude/hooks/check_connection.py",
+            "timeout": 3,
+            "statusMessage": "Checking Godot connection..."
+          }
+        ]
+      },
+      {
+        "matcher": "Edit|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 .claude/hooks/block_tscn_edit.py",
+            "timeout": 3,
+            "statusMessage": "Checking file type..."
+          }
+        ]
+      }
+    ],
+    "SessionStart": [
+      {
+        "matcher": "compact",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 .claude/hooks/compact_context.py",
+            "timeout": 5,
+            "statusMessage": "Re-injecting project context..."
+          }
+        ]
+      }
+    ],
+    "PreCompact": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 .claude/hooks/pre_compact.py",
+            "timeout": 5,
+            "statusMessage": "Saving project state..."
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "mcp__godot__godot_write_script",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 .claude/hooks/gdscript_lint.py",
+            "timeout": 5,
+            "statusMessage": "Linting GDScript..."
+          }
+        ]
+      }
+    ]
+  },
+  "env": {
+    "CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS": "1"
+  }
+}

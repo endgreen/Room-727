@@ -8,6 +8,10 @@ signal phase_changed(new_phase: int)
 signal closeHallway
 var IsPlayerInsideRoom: bool
 
+## How many photographable areas must be shot before quota is met.
+@export var photos_needed: int = 5
+var photos_taken: int = 0
+
 
 
 
@@ -15,6 +19,7 @@ func _ready() -> void:
 	# When the door closes the signal travels in bus to here lmao
 	# and calls the DoorClosed Method, which is here
 	EventBus.door_closed.connect(DoorClosed)
+	EventBus.object_photographed.connect(_on_object_photographed)
 
 var game_phase: int = 0:
 	set(value):
@@ -49,3 +54,14 @@ func _handle_phase_change(new_phase: int) -> void:
 		2:
 			print("Entering Phase 2")
 			# Unlock phase 2 doors, update objective UI, etc.
+
+
+func _on_object_photographed(_area: Node) -> void:
+	# Area is already queued free by the interaction manager.
+	photos_taken += 1
+	if photos_taken == photos_needed:
+		_on_photo_quota_met()
+
+
+func _on_photo_quota_met() -> void:
+	game_phase = 2

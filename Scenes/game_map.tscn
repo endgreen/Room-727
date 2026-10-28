@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://1urqknh7jt86" path="res://Scenes/Elements/door.tscn" id="6_mue85"]
 [ext_resource type="PackedScene" uid="uid://7xp38tl6ojlv" path="res://Scenes/Elements/window.tscn" id="6_rlp0x"]
 [ext_resource type="PackedScene" uid="uid://dplcwu8vj8hcp" path="res://Scenes/Elements/dresser.tscn" id="7_mue85"]
+[ext_resource type="PackedScene" uid="uid://bcx2gr74x3uiu" path="res://Scenes/Elements/shelf.tscn" id="8_nuwfo"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_jbw0w"]
 size = Vector3(27.78984, 0.97180176, 11.896362)
@@ -137,3 +138,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.5393105, -0.7232294, -0.77
 
 [node name="Dresser" parent="." unique_id=528884770 instance=ExtResource("7_mue85")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.820615, 0.5172123, -1.8862638)
+
+[node name="Shelf" parent="." unique_id=348938761 instance=ExtResource("8_nuwfo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.242393, 0.69738567, 2.0186284)

@@ -5,6 +5,7 @@
 [ext_resource type="Script" uid="uid://0jj1le65alr4" path="res://Scripts/Player/interaction_manager.gd" id="4_htcer"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_7duwv"]
+radius = 0.20703125
 height = 1.8071289
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_xpcdj"]
@@ -12,6 +13,10 @@ height = 0.54766846
 
 [node name="Player" type="CharacterBody3D" unique_id=387182528 groups=["player"]]
 script = ExtResource("1_blnjl")
+
+[node name="Uncrouch_Raycast" type="RayCast3D" parent="." unique_id=240360705]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.43899193, 0)
+target_position = Vector3(0, 1.22, 0)
 
 [node name="Normal_Collision" type="CollisionShape3D" parent="." unique_id=182732862]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.09643555, 0)
@@ -30,9 +35,7 @@ current = true
 
 [node name="Interaction_raycast" type="RayCast3D" parent="Neck/Camera3D" unique_id=1635678101]
 target_position = Vector3(0, 0, -1.06)
-hit_from_inside = true
 collide_with_areas = true
-collide_with_bodies = false
 
 [node name="Uncrouched_cameraPos" type="Marker3D" parent="." unique_id=1453336382]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.59804046, 0)

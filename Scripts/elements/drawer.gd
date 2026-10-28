@@ -10,7 +10,8 @@ var interactable: bool = true
 # only works if interactable
 
 func interact():
-	if interactable:
+	# Ignore input while the open/close animation is still running.
+	if interactable and not open_animation.is_playing():
 		print("Drawer: You interacted with me")
 		if opened:
 			open_animation.play("close")

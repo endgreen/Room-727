@@ -31,9 +31,6 @@ glow_enabled = true
 [sub_resource type="BoxShape3D" id="BoxShape3D_3dryh"]
 size = Vector3(1, 1, 2.3711548)
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_xcxek"]
-size = Vector3(1.032135, 0.1182251, 0.2536621)
-
 [node name="Game" type="Node3D" unique_id=1941761500]
 
 [node name="UI" type="Control" parent="." unique_id=1005191455]
@@ -122,13 +119,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.682822, 0.23320818, -0.635
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Progression/1/FirstPhaseArea" unique_id=1942406238]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.210962, -0.74530375, -0.10041565)
 shape = SubResource("BoxShape3D_3dryh")
-
-[node name="FirstObject" type="Area3D" parent="Progression/1" unique_id=1490402539]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -18.13666, -11.960335)
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Progression/1/FirstObject" unique_id=1302943093]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.743698, 18.436012, 9.671058)
-shape = SubResource("BoxShape3D_xcxek")
 
 [connection signal="timeout" from="UI/tip_text/tip_text_timer" to="UI/tip_text" method="tip_text_timeout"]
 [connection signal="body_entered" from="Progression/1/FirstPhaseArea" to="game_manager" method="FirstAreaEntered"]
